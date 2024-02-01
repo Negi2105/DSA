@@ -143,7 +143,6 @@ new=LinkedList()
 new.append(10)
 new.append(20)
 new.append(30)
-new.append(40)
 print(new) 
 =======
 >>>>>>> 8617936fc80f5e17966ab08c7f0ba1cb2a128acf
