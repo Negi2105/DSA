@@ -33,5 +33,6 @@ new=LinkedList()
 new.append(10)
 new.append(20)
 new.append(30)
+new.append(40)
 print(new) 
 
