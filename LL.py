@@ -137,16 +137,12 @@ class LinkedList():
                 result += ' -> '
             temp_node = temp_node.next
         return result
-<<<<<<< HEAD
     
 new=LinkedList()
 new.append(10)
 new.append(20)
 new.append(30)
-https://github.com/Negi2105/DSA
 print(new) 
-=======
->>>>>>> 8617936fc80f5e17966ab08c7f0ba1cb2a128acf
 
 new_linkedlist= LinkedList()
 #print(new_linkedlist.pop_first())
