@@ -75,6 +75,22 @@ class CircularLL():
                 count+=1
             if current==self.head:
                 return "Element is not present"
+            
+    def remove(self, index):
+        current=self.head
+        for _ in range(index):
+            prev=current
+            current=current.next
+        prev.next=current.next
+        current.next=None
+        self.length-=1
+        return current
+    
+    def delete_all(self):
+        self.tail.next=None
+        self.head=None
+        self.tail=None
+        self.length=0
         
     def __str__(self):
         temp_node=self.head
@@ -92,6 +108,8 @@ new.prepend(5)
 new.prepend(6)
 new.append(7)
 new.insert(1, 50)
-print(new)
 new.traverse()
 new.search(5)
+print(new)
+new.remove(1)
+print(new)
