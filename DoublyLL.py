@@ -62,6 +62,34 @@ class DoublyLL():
                 current=current.prev
                 count-=1
             return current
+        
+    def set(self, index, target):
+        node=self.get(index)
+        if node:
+            node.value=target
+            return True
+        else:
+            return False
+        
+    def insert(self, index, value):
+        current=self.head
+        previous=None
+        new_node=Node(value)
+        if index==0:
+            self.prepend(value)
+            return
+        elif index==self.length:
+            self.append(value)
+            return
+        else:
+            for _ in range(index):
+                previous=current
+                current=current.next
+            previous.next=new_node
+            new_node.next=current
+            current.prev=new_node
+            new_node.prev=previous
+            self.length+=1
 
     def __str__(self):
         temp=self.head
@@ -81,4 +109,6 @@ new.append(3)
 new.prepend(0)
 new.append(4)
 #new.reverse_traverse()
-print(new.get(4))
+new.set(2,50)
+new.insert(0, 100)
+print(new)
